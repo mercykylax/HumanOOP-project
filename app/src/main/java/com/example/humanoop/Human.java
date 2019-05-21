@@ -3,9 +3,9 @@ package com.example.humanoop;
 import android.util.Log;
 
 public class Human {
-    public String name;
-    public int age;
-    public int weight;
+    private String name;
+    private int age;
+    private int weight;
 
     public Human(String name, int age, int weight) {
         this.name = name;
@@ -40,18 +40,23 @@ public class Human {
     public void eat() {
         Log.d("Human", "I am eating food");
     }
+    public void sleep() {
+        Log.d("Human","zzzzzzzzzzzz");
 
-    public void speak(String speech) { Log.d("Human", "I am not a robot");}
-
+    }
     public int sleep(int hours) {
         return Log.d("Human","I have been sleeping for" + hours + "hours");
     }
 
-    public int birthday () {
-        age=age+1;
-        return age;
+    public void speak(String speech){
+        Log.d("Human",speech);
     }
 
+    public void birthday () {
+        int age = getAge();
+        age = age + 1;
+        setAge(age);
+    }
 
 
 }
